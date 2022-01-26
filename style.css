@@ -1,21 +1,22 @@
-/* body{
-    background-color: rgb(178, 228, 252);
-} */
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(185, 215, 240);
+}
 main{
-    width:1250px;
+    width:900px;
     max-width: 90%;
     
     margin:0 auto;
     
     
 }
-/* section{
-    width: 1250px;
-    height: 650px;
+section{
+    
     background-color: white;
     border-radius: 10px;
-} */
-.top-player,.blogs{
+   
+}
+.top-player,.blogs,.courses{
     display: grid;
     
     grid-gap: 30px;
@@ -24,7 +25,7 @@ main{
     place-items: center;
     
 }
-.top-player{
+.top-player,.courses{
     grid-template-columns: repeat(3,1fr);
 }
 .blogs{
@@ -33,20 +34,38 @@ main{
 .thumbnail img{
     width: 200px;
     margin-right: 20px;
+    margin-left: 20px;
 }
-/* .section-title{
-    margin-left: 13%;
+
+.course-detail{
+    margin-left: 10px;
+}
+
+.section-title{
+    color: rgb(50, 96, 245);
+    margin-left: 20px;
     
-} */
+}
 .top-player .player img{
     height: 50px;
     margin-right: 20px;
     
 }
- .player,.blog{
+ .player,.blog,.course-info{
     display: flex;
     align-items: center;
+    
 }
+.filled{
+    color: gold;
+}
+.unfilled{
+    color: lightgrey;
+}
+.course-info p{
+    margin-right: 10px;
+}
+
 @media(max-width:992px){
     .top-player{
         
@@ -57,6 +76,9 @@ main{
     }
     .blogs{
         grid-template-columns: repeat(1,1fr);
+    }
+    .courses{
+        grid-template-columns: repeat(2,1fr);
     }
 }
 @media(max-width:668px){
@@ -69,6 +91,9 @@ main{
     }
     .blog{
        display:block ;
+    }
+    .courses{
+        grid-template-columns: repeat(1,1fr);
     }
 }
 
